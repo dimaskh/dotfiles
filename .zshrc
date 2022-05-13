@@ -1,5 +1,5 @@
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/dhurk/.oh-my-zsh"
+# Path to oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
