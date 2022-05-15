@@ -8,8 +8,8 @@ alias reload="source ~/.zshrc"
 # Git aliases
 alias gcm='git commit -m'
 alias gac="git add . && git commit -a -m "
-alias gplu="git pull upstream"
-alias gpsu="git push upstream"
+alias gpu="git push upstream"
+alias glu="git pull upstream"
 
 # Tmux aliases
 alias t="tmux"
