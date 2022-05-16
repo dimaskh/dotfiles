@@ -76,8 +76,10 @@ vnoremap <leader>y "+y
 nnoremap <leader>y "+y
 " Yank the whole file
 nnoremap <leader>Y gg"+yG
-" Move the highlighted code by J / K
+" Move lines by J / K
+nnoremap J :m .+1<CR>==
 vnoremap J :m '>+1<CR>gv=gv
+nnoremap K :m .-2<CR>==
 vnoremap K :m '<-2<CR>gv=gv
 " Don't use arrow keys
 map <up> <nop>
