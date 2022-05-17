@@ -1,6 +1,6 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set title
 set number relativenumber
@@ -17,9 +17,9 @@ set undofile undodir=~/.vim/undodir undolevels=1000
 set history=1000
 set clipboard=unnamed
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -30,7 +30,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/tagbar'
 Plug 'tpope/vim-fugitive'
-Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+            \ Plug 'ryanoasis/vim-devicons' |
+            \ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'terryma/vim-multiple-cursors'
@@ -39,11 +42,12 @@ Plug 'sheerun/vim-polyglot'
 Plug 'leafgarland/typescript-vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Themes
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tokyonight
 let g:tokyonight_style = "night"
 " Theme
@@ -53,18 +57,9 @@ let g:tokyonight_style = "night"
 " colorscheme duskfox
 colorscheme tokyonight
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugins settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme='dracula'
-" NerdTree
-map <F2> :NERDTreeToggle<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keymaps
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map leader to whitespace
 let mapleader = " "
 " Source configuratio by space + enter
@@ -96,3 +91,22 @@ imap fj <esc>
 imap jf <esc>
 " Map colon to semicolon
 nnoremap ; :
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Airline 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_powerline_fonts = 1
+let g:airline_theme='dracula'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <F2> :NERDTreeToggle<CR>
+map <F3> :NERDTreeFind<CR>
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tagbar
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <F8> :TagbarToggle<CR>
