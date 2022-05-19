@@ -29,3 +29,6 @@ export EDITOR='nvim'
 
 # Starship
 eval "$(starship init zsh)"
+
+# Fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
