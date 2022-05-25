@@ -46,6 +46,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'jiangmiao/auto-pairs' 
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
