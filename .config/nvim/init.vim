@@ -47,6 +47,8 @@ Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'jiangmiao/auto-pairs' 
+Plug 'Yggdroot/indentLine'
+Plug 'mbbill/undotree'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
