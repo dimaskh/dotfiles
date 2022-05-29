@@ -1,7 +1,7 @@
-# /$HOME/.config/tmuxinator/vim-setup.yml
+# /home/dima/.config/tmuxinator/cheatsheets.yml
 
-name: vim-setup
-root: ~/.config/nvim/
+name: cheatsheets
+root: ~/Dev/cheatsheets
 
 # Optional tmux socket
 # socket_name: foo
@@ -45,7 +45,7 @@ root: ~/.config/nvim/
 # attach: false
 
 windows:
-  - vim-config:
+  - vim:
       layout: even-horizontal
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
@@ -53,5 +53,13 @@ windows:
       panes:
         - clear
         - clear
-  - terminal:
+  - tmux:
       layout: even-horizontal
+      panel:
+        - clear
+        - clear
+  - alacritty:
+      layout: even-horizontal
+      panel:
+        - clear
+        - clear

@@ -6,7 +6,7 @@ window:
   startup_mode: Maximized 
 
 scrolling:
-  history: 0
+  history: 10000
 
   multiplier: 3
 
@@ -62,5 +62,11 @@ colors:
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-
   save_to_clipboard: true
+
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
