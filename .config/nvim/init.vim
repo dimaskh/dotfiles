@@ -49,6 +49,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'jiangmiao/auto-pairs' 
 Plug 'Yggdroot/indentLine'
 Plug 'mbbill/undotree'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -97,6 +98,11 @@ imap fj <esc>
 imap jf <esc>
 " Map colon to semicolon
 nnoremap ; :
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Autocommands
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufEnter *.md set concealcursor=nvc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline 
