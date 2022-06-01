@@ -15,7 +15,8 @@ alias glu="git pull upstream"
 alias t="tmux"
 alias ta="t a -t"
 alias tls="t ls"
-alias tn="t new -t"
+alias tns="t new -s"
+alias tnt="t new -t"
 alias tx="tmuxinator"
 
 # NPM aliases
