@@ -32,14 +32,14 @@ export EDITOR='nvim'
 eval "$(starship init zsh)"
 
 # SSH Agent
-# eval "$(ssh-agent -s)" &> /dev/null
+eval "$(ssh-agent -s)" &> /dev/null
 # export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-  eval `ssh-agent`
-  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
-fi
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+# if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+#   eval `ssh-agent`
+#   ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+# fi
+# export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 # ssh-add -l > /dev/null || ssh-add ~/.ssh/id_ed25519 ~/.ssh/id_ed25519_github
 
 # eval `keychain --agents ssh --eval id_ed25519 id_ed25519_github`
