@@ -29,6 +29,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # Default editor
 export EDITOR='nvim'
 
+# SSH Agent
+eval `keychain --agents ssh --eval id_ed25519 id_ed25519_github`
+
 # Starship
 eval "$(starship init zsh)"
 
