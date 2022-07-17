@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  ssh-agent
+  # ssh-agent
   docker
   docker-compose
   zsh-syntax-highlighting
