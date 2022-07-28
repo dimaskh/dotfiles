@@ -21,7 +21,7 @@ _M.layouts = {
     -- awful.layout.suit.corner.se,
 }
 
-_M.tags = { 'main', 'www', 'chat', 'mail', 'dev', 'test', 'docs', 'env', 'temp' }
+_M.tags = { 'main', 'work', 'chat', 'mail', 'dev', 'test', 'docs', 'env', 'org' }
 
 local l = awful.layout.suit
 _M.default_layouts = { l.max, l.max, l.max, l.max, l.max, l.max, l.max, l.max, l.max }
