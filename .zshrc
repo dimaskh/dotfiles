@@ -38,3 +38,6 @@ eval "$(ssh-agent -s)" &> /dev/null
 
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Path
+export PATH="$HOME/.local/bin:$PATH"

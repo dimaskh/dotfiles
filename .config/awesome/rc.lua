@@ -6,7 +6,7 @@ pcall(require, 'luarocks.loader')
 -- load theme
 local beautiful = require'beautiful'
 local gears = require'gears'
-beautiful.init(gears.filesystem.get_themes_dir() .. 'xresources/theme.lua')
+beautiful.init(gears.filesystem.get_themes_dir() .. 'default/theme.lua')
 
 -- load autofocus
 require'awful.autofocus'
