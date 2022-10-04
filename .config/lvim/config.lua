@@ -1,7 +1,8 @@
 -- Options
-lvim.log.level = "warn"
-lvim.format_on_save = true
-lvim.colorscheme = "onedarker"
+require "lua.options"
+
+-- Plugins
+require "lua.plugins"
 
 -- Keymaps [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
