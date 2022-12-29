@@ -10,6 +10,9 @@ scrolling:
 
   multiplier: 3
 
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
 font:
   normal:
     #family: JetBrainsMono Nerd Font
