@@ -5,6 +5,13 @@ alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
 alias myip="curl http://ipecho.net/plain; echo"
 alias reload="source ~/.zshrc"
 
+# List aliases
+alias ls="ls --color=auto"
+alias la="ls -a"
+alias ll="ls -alFh"
+alias l="ls"
+alias l.="ls -A | egrep '^\.'"
+
 # Git aliases
 alias gcm='git commit -m'
 alias gac="git add . && git commit -a -m "
