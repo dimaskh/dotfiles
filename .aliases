@@ -37,3 +37,11 @@ alias dfa="dotfiles add"
 alias dfcm="dotfiles commit -m"
 alias dfp="dotfiles push"
 alias dfl="dotfiles pull"
+
+# Pacman
+alias sps="sudo pacman -S"
+alias spr="sudo pacman -R"
+alias sprs="sudo pacman -Rs"
+alias sprdd="sudo pacman -Rdd"
+alias spqo="sudo pacman -Qo"
+alias spsii="sudo pacman -Sii"
