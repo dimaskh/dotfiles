@@ -12,6 +12,9 @@ alias ll="ls -alFh"
 alias l="ls"
 alias l.="ls -A | egrep '^\.'"
 
+# Utility aliases
+alias df="df -h"
+
 # Git aliases
 alias gcm='git commit -m'
 alias gac="git add . && git commit -a -m "
