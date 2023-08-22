@@ -42,6 +42,7 @@ alias dfp="dotfiles push"
 alias dfl="dotfiles pull"
 
 # Pacman
+alias pacman="sudo pacman --color auto"
 alias sps="sudo pacman -S"
 alias spr="sudo pacman -R"
 alias sprs="sudo pacman -Rs"
@@ -49,3 +50,4 @@ alias sprdd="sudo pacman -Rdd"
 alias spqo="sudo pacman -Qo"
 alias spsii="sudo pacman -Sii"
 alias update="sudo pacman -Syyu"
+alias upd="sudo pacman -Syyu"
