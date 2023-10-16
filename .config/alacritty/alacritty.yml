@@ -5,34 +5,33 @@ window:
   
   opacity: 1
 
+  startup_mode: Maximized
+
 scrolling:
   history: 50000
 
   multiplier: 3
 
-mouse_bindings:
-  - { mouse: Middle, action: PasteSelection }
-
 font:
   normal:
     #family: JetBrainsMono Nerd Font
     #family: Hack Nerd Font Mono
-    #family: FiraCode Nerd Font Mono
-    family: FiraMono Nerd Font
+    family: FiraCode Nerd Font Mono
+    #family: FiraMono Nerd Font
     style: Regular
 
   bold:
     #family: JetBrainsMono Nerd Font
     #family: Hack Nerd Font Mono
-    #family: FiraCode Nerd Font Mono
-    family: FiraMono Nerd Font
+    family: FiraCode Nerd Font Mono
+    #family: FiraMono Nerd Font
     style: Bold
 
   italic:
     #family: JetBrainsMono Nerd Font
     #family: Hack Nerd Font Mono
-    #family: FiraCode Nerd Font Mono
-    family: FiraMono Nerd Font
+    family: FiraCode Nerd Font Mono
+    #family: FiraMono Nerd Font
     style: Italic
 
   size: 12.0

@@ -11,8 +11,8 @@ plugins=(
   docker
   docker-compose
   sudo
-  zsh-syntax-highlighting
   zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 # Source oh-my-zsh script
