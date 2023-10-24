@@ -10,7 +10,9 @@ function run {
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 run nm-applet
 run variety
-run picom
+run picom -b
+# run picom --experimental-backends --config $HOME/.config/picom/picom.conf
+# run picom
 #run caffeine
 # run pamac-tray
 # run xfce4-power-manager
