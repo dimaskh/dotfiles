@@ -572,5 +572,6 @@ client.connect_signal("mouse::enter", function(c)
     c:activate { context = "mouse_enter", raise = false }
 end)
 
-awful.spawn.with_shell("picom")
-os.execute("/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1")
+-- awful.spawn.with_shell("picom")
+-- os.execute("/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1")
+awful.spawn.with_shell("~/.config/awesome/autostart.sh")
