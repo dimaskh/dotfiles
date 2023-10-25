@@ -213,7 +213,9 @@ awful.mouse.append_global_mousebindings({
 -- }}}
 
 -- {{{ Key bindings
-
+-- local rofi_cmd = "rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/launchers/type-1/style-5.rasi"
+local rofi_cmd = "rofi -show drun -theme ~/.config/rofi/launchers/type-1/style-5.rasi"
+local dmenu_cmd = "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14"
 -- General Awesome keys
 awful.keyboard.append_global_keybindings({
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
@@ -240,8 +242,12 @@ awful.keyboard.append_global_keybindings({
               {description = "run prompt", group = "launcher"}),
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
-    awful.key({ modkey }, "d", function() awful.util.spawn("dmenu_run") end,
-              {description = "show dmenu", group = "launcher"}),
+    awful.key({ modkey }, "d", function() awful.util.spawn(
+                string.format(rofi_cmd, beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus)) end,
+              {description = "show rofi", group = "launcher"}),
+    awful.key({ modkey, "Shift" }, "d", function () awful.spawn(
+                string.format(dmenu_cmd, beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus)) end,
+              {description = "show dmenu", group = "hotkeys"}),
 })
 
 -- Applications

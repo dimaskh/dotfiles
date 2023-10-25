@@ -16,7 +16,7 @@ run picom -b
 #run caffeine
 # run pamac-tray
 # run xfce4-power-manager
-# run blueberry-tray
+run blueberry-tray
 # run numlockx on
 # run volumeicon
 #run nitrogen --restore
