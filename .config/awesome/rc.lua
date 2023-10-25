@@ -78,7 +78,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Table of layouts to cover with awful.layout.inc, order matters.
 tag.connect_signal("request::default_layouts", function()
     awful.layout.append_default_layouts({
-        awful.layout.suit.floating,
+        -- awful.layout.suit.floating,
         awful.layout.suit.tile,
         -- awful.layout.suit.tile.left,
         -- awful.layout.suit.tile.bottom,
@@ -87,7 +87,7 @@ tag.connect_signal("request::default_layouts", function()
         -- awful.layout.suit.fair.horizontal,
         -- awful.layout.suit.spiral,
         -- awful.layout.suit.spiral.dwindle,
-        awful.layout.suit.max,
+        -- awful.layout.suit.max,
         -- awful.layout.suit.max.fullscreen,
         -- awful.layout.suit.magnifier,
         -- awful.layout.suit.corner.nw,
@@ -500,11 +500,11 @@ ruled.client.connect_signal("request::rules", function()
     }
 
     -- Add titlebars to normal clients and dialogs
-    ruled.client.append_rule {
-        id         = "titlebars",
-        rule_any   = { type = { "normal", "dialog" } },
-        properties = { titlebars_enabled = false, maximized = false      }
-    }
+    -- ruled.client.append_rule {
+    --     id         = "titlebars",
+    --     rule_any   = { type = { "normal", "dialog" } },
+    --     properties = { titlebars_enabled = false, maximized = false      }
+    -- }
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- ruled.client.append_rule {
@@ -577,5 +577,8 @@ end)
 client.connect_signal("mouse::enter", function(c)
     c:activate { context = "mouse_enter", raise = false }
 end)
+
+-- Custom configuration
+beautiful.useless_gap = 5
 
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
