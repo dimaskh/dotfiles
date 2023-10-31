@@ -28,6 +28,34 @@ naughty.connect_signal("request::display_error", function(message, startup)
 end)
 -- }}}
 
+
+-- Handle runtime errors after startup
+do
+    local in_error = false
+    awesome.connect_signal("debug::error", function (err)
+        if in_error then return end
+        in_error = true
+
+        naughty.notify({ preset = naughty.config.presets.critical,
+                         title = "Oops, an error happened!",
+                         text = tostring(err) })
+        in_error = false
+    end)
+end
+-- }}}
+
+
+
+-- {{{ Autostart windowless processes
+local function run_once(cmd_arr)
+    for _, cmd in ipairs(cmd_arr) do
+        awful.spawn.with_shell(string.format("pgrep -u $USER -fx '%s' > /dev/null || (%s)", cmd, cmd))
+    end
+end
+
+run_once({ "unclutter -root" }) -- entries must be comma-separated
+-- }}}
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "default")
@@ -35,16 +63,23 @@ local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.ge
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
-editor = os.getenv("EDITOR") or "nano"
-editor_cmd = terminal .. " -e " .. editor
+local terminal = "alacritty"
+local editor = os.getenv("EDITOR") or "nvim"
+local editor_cmd = terminal .. " -e " .. editor
+local editor_gui = "code-insiders"
+local browser1 = "firefox-developer-edition"
+local browser2 = "chromium -no-default-browser-check"
+local browser3 = "google-chrome-stable -no-default-browser-check"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod4"
+local modkey = "Mod4"
+local altkey = "Mod1"
+local ctrlkey = "Control"
+local shiftkey = "Shift"
 -- }}}
 
 -- {{{ Menu
@@ -91,23 +126,23 @@ end)
 -- }}}
 
 -- {{{ Wallpaper
-screen.connect_signal("request::wallpaper", function(s)
-    awful.wallpaper {
-        screen = s,
-        widget = {
-            {
-                image     = beautiful.wallpaper,
-                upscale   = true,
-                downscale = true,
-                widget    = wibox.widget.imagebox,
-            },
-            valign = "center",
-            halign = "center",
-            tiled  = false,
-            widget = wibox.container.tile,
-        }
-    }
-end)
+-- screen.connect_signal("request::wallpaper", function(s)
+--     awful.wallpaper {
+--         screen = s,
+--         widget = {
+--             {
+--                 image     = beautiful.wallpaper,
+--                 upscale   = true,
+--                 downscale = true,
+--                 widget    = wibox.widget.imagebox,
+--             },
+--             valign = "center",
+--             halign = "center",
+--             tiled  = false,
+--             widget = wibox.container.tile,
+--         }
+--     }
+-- end)
 -- }}}
 
 -- {{{ Wibar
@@ -120,7 +155,7 @@ mytextclock = wibox.widget.textclock()
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4" }, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -196,7 +231,6 @@ screen.connect_signal("request::desktop_decoration", function(s)
         }
     }
 end)
-
 -- }}}
 
 -- {{{ Mouse bindings
@@ -208,11 +242,32 @@ awful.mouse.append_global_mousebindings({
 -- }}}
 
 -- {{{ Key bindings
--- local rofi_cmd = "rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/launchers/type-1/style-5.rasi"
 local rofi_cmd = "rofi -show drun -theme ~/.config/rofi/launchers/type-1/style-5.rasi"
 local dmenu_cmd = "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14"
--- General Awesome keys
+
 awful.keyboard.append_global_keybindings({
+    -- {{{ Personal keybindings
+    awful.key({ modkey }, "b", function() awful.util.spawn("firefox-developer-edition") end,
+              {description = "firefox", group = "applications"}),
+    awful.key({ modkey, ctrlkey }, "b", function() awful.util.spawn(browser2) end,
+              {description = "chromium", group = "applications"}),
+    awful.key({ modkey, shiftkey }, "b", function() awful.util.spawn(browser3) end,
+              {description = "chrome", group = "applications"}),
+    awful.key({ modkey }, "c", function() awful.util.spawn(editor_gui) end,
+              {description = "vscode", group = "applications"}),
+    awful.key({ modkey }, "v", function() awful.util.spawn("pavucontrol") end,
+              {description = "pavucontrol", group = "applications"}),
+    awful.key({ modkey }, "x", function() awful.util.spawn("archlinux-logout") end,
+              {description = "logout menu", group = "hotkeys"}),
+    awful.key({ modkey, altkey }, "x", function() awful.util.spawn("shutdown now") end,
+              {description = "shutdown", group = "hotkeys"}),
+    awful.key({ modkey, altkey }, "r", function() awful.util.spawn("reboot") end,
+              {description = "reboot", group = "hotkeys"}),
+    awful.key({ modkey }, "Escape", function() awful.util.spawn("xkill") end,
+              {description = "kill process", group = "hotkeys"}),
+    -- }}}
+
+    -- {{{ General Awesome keys
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
@@ -221,7 +276,7 @@ awful.keyboard.append_global_keybindings({
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-    awful.key({ modkey }, "x",
+    awful.key({ modkey, "Shift" }, "x",
               function ()
                   awful.prompt.run {
                     prompt       = "Run Lua code: ",
@@ -231,6 +286,9 @@ awful.keyboard.append_global_keybindings({
                   }
               end,
               {description = "lua execute prompt", group = "awesome"}),
+    -- }}}
+
+    -- {{{ Launcher keys
     awful.key({ modkey,           }, "t", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
@@ -242,14 +300,20 @@ awful.keyboard.append_global_keybindings({
               {description = "show rofi", group = "launcher"}),
     awful.key({ modkey, "Shift" }, "d", function () awful.spawn(
                 string.format(dmenu_cmd, beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus)) end,
-              {description = "show dmenu", group = "hotkeys"}),
+              {description = "show dmenu", group = "launcher"}),
+    -- }}}
+
+    -- {{{ Screenshots
+    awful.key({ }, "Print", function () awful.util.spawn("scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'") end,
+        {description = "Scrot", group = "screenshots"}),
+    awful.key({ modkey1           }, "Print", function () awful.util.spawn( "xfce4-screenshooter" ) end,
+        {description = "Xfce screenshot", group = "screenshots"}),
+    awful.key({ modkey1, "Shift"  }, "Print", function() awful.util.spawn("gnome-screenshot -i") end,
+        {description = "Gnome screenshot", group = "screenshots"}),
+    -- }}}
 })
 
 -- Applications
-awful.keyboard.append_global_keybindings({
-    awful.key({ modkey }, "b", function() awful.util.spawn("firefox-developer-edition") end,
-              {description = "firefox", group = "applications"}),
-})
 
 -- Tags related keybindings
 awful.keyboard.append_global_keybindings({
@@ -477,7 +541,7 @@ ruled.client.connect_signal("request::rules", function()
         rule_any = {
             instance = { "copyq", "pinentry" },
             class    = {
-                "Arandr", "Blueman-manager", "Gpick", "Kruler", "Sxiv",
+                "Arandr",  "Blueberry", "Blueman-manager", "Gpick", "Kruler", "Sxiv",
                 "Tor Browser", "Wpa_gui", "veromix", "xtightvncviewer"
             },
             -- Note that the name property shown in xprop might be set slightly after creation of the client
@@ -492,6 +556,18 @@ ruled.client.connect_signal("request::rules", function()
             }
         },
         properties = { floating = true }
+    }
+
+    -- Floating clients but centered in screen
+    ruled.client.append_rule {
+        id = "floating_centered",
+        rule_any = {
+            class = {
+       		      "Polkit-gnome-authentication-agent-1",
+				    },
+				},
+      	properties = { floating = true },
+	      callback = function (c) awful.placement.centered(c,nil) end
     }
 
     -- Add titlebars to normal clients and dialogs
@@ -572,6 +648,8 @@ end)
 client.connect_signal("mouse::enter", function(c)
     c:activate { context = "mouse_enter", raise = false }
 end)
+client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 -- Custom configuration
 beautiful.useless_gap = 5

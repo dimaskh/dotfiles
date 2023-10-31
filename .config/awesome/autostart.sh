@@ -18,7 +18,7 @@ run picom -b
 # run pamac-tray
 # run xfce4-power-manager
 run blueberry-tray
-# run numlockx on
+run numlockx on
 # run volumeicon
 #run nitrogen --restore
 # run conky -c $HOME/.config/awesome/system-overview
