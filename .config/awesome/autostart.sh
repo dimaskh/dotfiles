@@ -11,14 +11,13 @@ run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 run nm-applet
 run variety
 run picom -b
-# run picom --experimental-backends
-# run picom --experimental-backends --config $HOME/.config/picom/picom.conf
-# run picom
-#run caffeine
-# run pamac-tray
-# run xfce4-power-manager
 run blueberry-tray
 run numlockx on
+run flameshot
+
+# run xfce4-power-manager
+# run pamac-tray
+#run caffeine
 # run volumeicon
 #run nitrogen --restore
 # run conky -c $HOME/.config/awesome/system-overview

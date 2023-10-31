@@ -304,8 +304,8 @@ awful.keyboard.append_global_keybindings({
     -- }}}
 
     -- {{{ Screenshots
-    awful.key({ }, "Print", function () awful.util.spawn("scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'") end,
-        {description = "Scrot", group = "screenshots"}),
+    awful.key({ }, "Print", function () awful.util.spawn("flameshot gui") end,
+        {description = "Flameshot", group = "screenshots"}),
     awful.key({ modkey1           }, "Print", function () awful.util.spawn( "xfce4-screenshooter" ) end,
         {description = "Xfce screenshot", group = "screenshots"}),
     awful.key({ modkey1, "Shift"  }, "Print", function() awful.util.spawn("gnome-screenshot -i") end,
@@ -541,8 +541,17 @@ ruled.client.connect_signal("request::rules", function()
         rule_any = {
             instance = { "copyq", "pinentry" },
             class    = {
-                "Arandr",  "Blueberry", "Blueman-manager", "Gpick", "Kruler", "Sxiv",
-                "Tor Browser", "Wpa_gui", "veromix", "xtightvncviewer"
+                "Arandr",
+                "Blueberry",
+                "Blueman-manager",
+                "Gcr-prompter",
+                "Gpick",
+                "Kruler",
+                "Sxiv",
+                "Tor Browser",
+                "Wpa_gui",
+                "veromix",
+                "xtightvncviewer"
             },
             -- Note that the name property shown in xprop might be set slightly after creation of the client
             -- and the name shown there might not match defined rules here.
