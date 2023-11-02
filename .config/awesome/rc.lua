@@ -306,10 +306,13 @@ awful.keyboard.append_global_keybindings({
     -- {{{ Screenshots
     awful.key({ }, "Print", function () awful.util.spawn("flameshot gui") end,
         {description = "Flameshot", group = "screenshots"}),
-    awful.key({ modkey1           }, "Print", function () awful.util.spawn( "xfce4-screenshooter" ) end,
-        {description = "Xfce screenshot", group = "screenshots"}),
-    awful.key({ modkey1, "Shift"  }, "Print", function() awful.util.spawn("gnome-screenshot -i") end,
-        {description = "Gnome screenshot", group = "screenshots"}),
+    -- }}}
+
+    -- {{{ Wallpapers
+    awful.key({ modkey, shiftkey }, "Right", function () awful.util.spawn("variety -n") end,
+        {description = "Wallpaper next", group = "wallpapers"}),
+    awful.key({ altkey, shiftkey }, "Left", function () awful.util.spawn("variety -p") end,
+        {description = "Wallpaper previous", group = "wallpapers"}),
     -- }}}
 })
 
