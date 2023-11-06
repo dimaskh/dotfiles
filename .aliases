@@ -51,3 +51,6 @@ alias spqo="sudo pacman -Qo"
 alias spsii="sudo pacman -Sii"
 alias update="sudo pacman -Syyu"
 alias upd="sudo pacman -Syyu"
+
+# Buku
+alias b="buku --suggest"
