@@ -11,7 +11,7 @@ run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 run nm-applet
 run variety
 run picom -b
-run blueberry-tray
+# run blueberry-tray
 run numlockx on
 run flameshot
 

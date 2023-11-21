@@ -53,7 +53,7 @@ local function run_once(cmd_arr)
     end
 end
 
-run_once({ "unclutter -root" }) -- entries must be comma-separated
+-- run_once({ "unclutter -root" }) -- entries must be comma-separated
 -- }}}
 
 -- {{{ Variable definitions
@@ -67,8 +67,8 @@ local terminal = "alacritty"
 local editor = os.getenv("EDITOR") or "nvim"
 local editor_cmd = terminal .. " -e " .. editor
 local editor_gui = "code-insiders"
-local browser1 = "firefox-developer-edition"
-local browser2 = "chromium -no-default-browser-check"
+local browser1 = "chromium -no-default-browser-check"
+local browser2 = "firefox-developer-edition"
 local browser3 = "google-chrome-stable -no-default-browser-check"
 
 -- Default modkey.
@@ -243,18 +243,22 @@ awful.mouse.append_global_mousebindings({
 
 -- {{{ Key bindings
 local rofi_cmd = "rofi -show drun -theme ~/.config/rofi/launchers/type-1/style-5.rasi"
+local rofi_taskwarrior_cmd = "rofi -modi tasks:rofi-taskwarrior -show tasks -theme ~/.config/rofi/launchers/type-1/style-5.rasi"
+local rofi_buku_cmd = "rofi-buku"
 local dmenu_cmd = "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14"
 
 awful.keyboard.append_global_keybindings({
     -- {{{ Personal keybindings
-    awful.key({ modkey }, "b", function() awful.util.spawn("firefox-developer-edition") end,
+    awful.key({ modkey }, "b", function() awful.util.spawn(browser1) end,
               {description = "firefox", group = "applications"}),
     awful.key({ modkey, ctrlkey }, "b", function() awful.util.spawn(browser2) end,
               {description = "chromium", group = "applications"}),
     awful.key({ modkey, shiftkey }, "b", function() awful.util.spawn(browser3) end,
               {description = "chrome", group = "applications"}),
-    awful.key({ modkey }, "c", function() awful.util.spawn(editor_gui) end,
+    awful.key({ modkey, ctrlkey }, "c", function() awful.util.spawn(editor_gui) end,
               {description = "vscode", group = "applications"}),
+    awful.key({ modkey }, "m", function() awful.util.spawn("deezer") end,
+              {description = "deezer", group = "applications"}),
     awful.key({ modkey }, "v", function() awful.util.spawn("pavucontrol") end,
               {description = "pavucontrol", group = "applications"}),
     awful.key({ modkey }, "x", function() awful.util.spawn("archlinux-logout") end,
@@ -265,6 +269,8 @@ awful.keyboard.append_global_keybindings({
               {description = "reboot", group = "hotkeys"}),
     awful.key({ modkey }, "Escape", function() awful.util.spawn("xkill") end,
               {description = "kill process", group = "hotkeys"}),
+    awful.key({ modkey }, "]", function() awful.util.spawn("openssl rand -hex 12 | xclip -sel clip") end,
+              {description = "generate random hash", group = "random"}),
     -- }}}
 
     -- {{{ General Awesome keys
@@ -298,6 +304,12 @@ awful.keyboard.append_global_keybindings({
     awful.key({ modkey }, "d", function() awful.util.spawn(
                 string.format(rofi_cmd, beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus)) end,
               {description = "show rofi", group = "launcher"}),
+    awful.key({ modkey, ctrlkey }, "t", function() awful.util.spawn(
+                string.format(rofi_taskwarrior_cmd, beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus)) end,
+              {description = "show rofi-taskwarrior", group = "launcher"}),
+    awful.key({ modkey }, "<", function() awful.util.spawn(
+                string.format(rofi_buku_cmd, beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus)) end,
+              {description = "show rofi-buku", group = "launcher"}),
     awful.key({ modkey, "Shift" }, "d", function () awful.spawn(
                 string.format(dmenu_cmd, beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus)) end,
               {description = "show dmenu", group = "launcher"}),

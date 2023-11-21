@@ -1,11 +1,7 @@
 # Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+# Plugins
 plugins=(
   git
   docker
@@ -37,4 +33,8 @@ eval "$(ssh-agent -s)" &> /dev/null
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Path
-export PATH="$HOME/.local/bin:$PATH"
+# export PATH="$HOME/.local/bin:$PATH"
+
+# Taskwarrior
+export TASKRC=~/.config/taskwarrior/.taskrc
+export TASKDATA=~/.config/taskwarrior/.task
