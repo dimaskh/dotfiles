@@ -27,7 +27,14 @@ export EDITOR='nvim'
 eval "$(starship init zsh)"
 
 # SSH Agent
-eval "$(ssh-agent -s)" &> /dev/null
+# eval "$(ssh-agent -s)" &> /dev/null
+# if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#     ssh-agent -t 12h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+# fi
+# if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
+#     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+# fi
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
