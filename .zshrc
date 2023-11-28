@@ -35,6 +35,7 @@ eval "$(starship init zsh)"
 #     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 # fi
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+# Test
 
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
