@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=ssh-add -q .ssh/id_ed25519_github .ssh/github_softserve_personal_key
+Name=ssh-add
+Type=Application
