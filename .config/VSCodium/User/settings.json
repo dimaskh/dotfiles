@@ -1,0 +1,38 @@
+{
+  "yaml.schemas": {
+      "file:///Users/dhurk/.vscode/extensions/atlassian.atlascode-3.0.4/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "explorer.confirmDelete": false,
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono', 'FiraMono Nerd Font'",
+  "terminal.explorerKind": "external",
+  "editor.fontFamily": "'FiraCode Nerd Font Mono', 'FiraMono Nerd Font', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "window.zoomLevel": 1,
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.addMissingImports": true
+  },
+  "editor.tabSize": 2,
+}
