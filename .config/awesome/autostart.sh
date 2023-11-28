@@ -1,10 +1,9 @@
 #!/bin/bash
 
 function run {
-  if ! pgrep $1 ;
-  then
-    $@&
-  fi
+	if ! pgrep $1; then
+		$@ &
+	fi
 }
 
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

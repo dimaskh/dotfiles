@@ -38,3 +38,4 @@ eval "$(ssh-agent -s)" &> /dev/null
 # Taskwarrior
 export TASKRC=~/.config/taskwarrior/.taskrc
 export TASKDATA=~/.config/taskwarrior/.task
+
