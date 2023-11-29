@@ -1,3 +1,5 @@
+[description:"Automate ssh passphrase" end:"1701200145" entry:"1699903126" modified:"1701200145" priority:"M" project:"Arch" status:"completed" tags:"next,problem" tags_next:"x" tags_problem:"x" uuid:"8564d23a-a5c3-4c29-a82f-f6aeb4a82ccc"]
+[description:"Make a backup" end:"1701200142" entry:"1701113213" modified:"1701200142" priority:"H" project:"Env" status:"completed" tags:"next" tags_next:"x" uuid:"16af0e00-9060-4fa5-8d36-cb32bdb8a4e4"]
 [description:"Unclutter home folder" end:"1701194125" entry:"1700072546" modified:"1701194125" priority:"H" project:"Arch" status:"completed" tags:"next,problem" tags_next:"x" tags_problem:"x" uuid:"72b9f046-45fa-48fb-b058-e3deb67ecf88"]
 [description:"Play with tmux and tmuxinator" end:"1701189698" entry:"1700675921" modified:"1701189698" priority:"H" project:"Arch" status:"completed" tags:"next" tags_next:"x" uuid:"96e7edbe-e810-4e88-ab04-57986cee568f"]
 [description:"Get rid of Google Chrome" end:"1701113154" entry:"1699985884" modified:"1701113154" priority:"H" project:"Env" status:"completed" tags:"next,problem" tags_next:"x" tags_problem:"x" uuid:"6bfeda39-f072-4865-b037-ac04e7501fcb"]
