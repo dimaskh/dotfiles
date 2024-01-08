@@ -963,3 +963,217 @@ time 1701200145
 old [description:"Automate ssh passphrase" entry:"1699903126" modified:"1701194259" priority:"M" project:"Arch" start:"1701194259" status:"pending" tags:"next,problem" tags_next:"x" tags_problem:"x" uuid:"8564d23a-a5c3-4c29-a82f-f6aeb4a82ccc"]
 new [description:"Automate ssh passphrase" end:"1701200145" entry:"1699903126" modified:"1701200145" priority:"M" project:"Arch" status:"completed" tags:"next,problem" tags_next:"x" tags_problem:"x" uuid:"8564d23a-a5c3-4c29-a82f-f6aeb4a82ccc"]
 ---
+time 1701246715
+old [description:"Get rid of Todoist" entry:"1700587051" modified:"1700587051" priority:"L" project:"Env" status:"pending" uuid:"4667bdb2-2fcd-4f7a-9930-9b9087187cc3"]
+new [description:"Get rid of Todoist" entry:"1700587051" modified:"1701246715" priority:"L" project:"Env" status:"pending" tags:"next" tags_next:"x" uuid:"4667bdb2-2fcd-4f7a-9930-9b9087187cc3"]
+---
+time 1701247061
+old [description:"Revisit and backup dotfiles" entry:"1700675944" modified:"1700675944" priority:"M" project:"Arch" status:"pending" uuid:"cbff8b49-8eaa-4bea-835a-03d74660fcc0"]
+new [description:"Revisit and backup dotfiles" end:"1701247061" entry:"1700675944" modified:"1701247061" priority:"M" project:"Arch" status:"completed" uuid:"cbff8b49-8eaa-4bea-835a-03d74660fcc0"]
+---
+time 1701681695
+new [description:"Pass 'Learn Vim' extenstion in vscode" entry:"1701681695" modified:"1701681695" priority:"M" project:"Env" status:"pending" uuid:"40640344-7a8c-459e-b680-3d6b4faeb4f0"]
+---
+time 1701681720
+new [description:"Investigate ways to improve vscode experience" entry:"1701681720" modified:"1701681720" priority:"M" project:"Env" status:"pending" uuid:"6a4d49f6-f438-4437-9d93-fd81ce682cd5"]
+---
+time 1701959352
+old [annotation_1699296028:"https:\/\/javascript.info\/" description:"Read javascript.info" entry:"1699296006" modified:"1700070309" priority:"M" project:"Web" status:"pending" uuid:"d5036c24-080d-418a-9fd9-c63ccc2a891a"]
+new [annotation_1699296028:"https:\/\/javascript.info\/" description:"Read javascript.info" entry:"1699296006" modified:"1701959352" priority:"M" project:"Web" status:"pending" tags:"next" tags_next:"x" uuid:"d5036c24-080d-418a-9fd9-c63ccc2a891a"]
+---
+time 1701959369
+old [description:"Improve rofi configuration" entry:"1699297730" modified:"1699989031" priority:"M" project:"Arch" status:"pending" uuid:"4f796c4e-4740-45dc-8ed9-7377e5465075"]
+new [description:"Improve rofi configuration" entry:"1699297730" modified:"1701959369" priority:"M" project:"Arch" status:"pending" tags:"next" tags_next:"x" uuid:"4f796c4e-4740-45dc-8ed9-7377e5465075"]
+---
+time 1701959378
+old [description:"Get rid of tick-tick" entry:"1700070924" modified:"1700070924" priority:"M" project:"Env" status:"pending" uuid:"37bb3cc8-9eee-48c8-b85f-1667691c30dd"]
+new [description:"Get rid of tick-tick" entry:"1700070924" modified:"1701959378" priority:"M" project:"Env" status:"pending" tags:"next" tags_next:"x" uuid:"37bb3cc8-9eee-48c8-b85f-1667691c30dd"]
+---
+time 1701959393
+old [description:"Investigate polybar" entry:"1699989067" modified:"1699989067" priority:"L" project:"Arch" status:"pending" uuid:"5f9b8861-d1bd-457c-a83c-08005a34a745"]
+new [description:"Investigate polybar" entry:"1699989067" modified:"1701959393" priority:"L" project:"Arch" status:"pending" tags:"next" tags_next:"x" uuid:"5f9b8861-d1bd-457c-a83c-08005a34a745"]
+---
+time 1701959398
+old [description:"Investigate ways to improve vscode experience" entry:"1701681720" modified:"1701681720" priority:"M" project:"Env" status:"pending" uuid:"6a4d49f6-f438-4437-9d93-fd81ce682cd5"]
+new [description:"Investigate ways to improve vscode experience" entry:"1701681720" modified:"1701959398" priority:"M" project:"Env" status:"pending" tags:"next" tags_next:"x" uuid:"6a4d49f6-f438-4437-9d93-fd81ce682cd5"]
+---
+time 1702027506
+new [description:"Read React docs" entry:"1702027506" modified:"1702027506" priority:"H" project:"React" status:"pending" uuid:"7d5ca363-1dcc-46f2-acdc-235a4f489757"]
+---
+time 1702027526
+new [description:"Read React Query docs" entry:"1702027526" modified:"1702027526" priority:"M" project:"React" status:"pending" uuid:"b841d6c9-f957-42d8-96b7-c2f0eaa2efe9"]
+---
+time 1702027555
+new [description:"Investigate TkDodo blog" entry:"1702027555" modified:"1702027555" priority:"M" project:"React" status:"pending" uuid:"e5f7f4ff-1df0-4353-8f08-587c58260dc1"]
+---
+time 1702027629
+new [description:"Read series of posts on React Query" entry:"1702027628" modified:"1702027628" priority:"M" project:"React" status:"pending" uuid:"78bd11cc-0b1b-47aa-b18c-7104fe1898f6"]
+---
+time 1702027635
+old [description:"Read series of posts on React Query" entry:"1702027628" modified:"1702027628" priority:"M" project:"React" status:"pending" uuid:"78bd11cc-0b1b-47aa-b18c-7104fe1898f6"]
+new [annotation_1702027635:"https:\/\/tkdodo.eu\/blog\/practical-react-query" description:"Read series of posts on React Query" entry:"1702027628" modified:"1702027635" priority:"M" project:"React" status:"pending" uuid:"78bd11cc-0b1b-47aa-b18c-7104fe1898f6"]
+---
+time 1703682817
+new [description:"Add grub issue troubleshooting guide to Notion" entry:"1703682817" modified:"1703682817" priority:"H" project:"Arch" status:"pending" uuid:"93d5476c-92cd-4ed7-8875-fc51a6a565f7"]
+---
+time 1703682904
+new [description:"Start working on the reproducible OS" entry:"1703682904" modified:"1703682904" priority:"H" project:"Arch" status:"pending" uuid:"5931974a-81b3-4b75-9de6-957905b4b1b7"]
+---
+time 1703682942
+new [description:"Clean up notion" entry:"1703682942" modified:"1703682942" priority:"M" project:"Env" status:"pending" uuid:"25a01de1-2f8e-4a43-8118-56db71a21950"]
+---
+time 1703682967
+new [description:"Check backups" entry:"1703682967" modified:"1703682967" priority:"H" project:"Arch" status:"pending" uuid:"a9f1e66f-724b-4c01-a814-7460ea1065fa"]
+---
+time 1703683604
+new [description:"Setup virtual machine software" entry:"1703683604" modified:"1703683604" priority:"H" project:"Arch" status:"pending" uuid:"b184cad3-2e83-4045-9b78-e3b6b058ba4c"]
+---
+time 1704112409
+new [description:"Re-read W3Schools Machine Learning tutorial carefully" entry:"1704112409" modified:"1704112409" priority:"L" project:"Misc" status:"pending" uuid:"ac6d601c-7690-4da5-850d-dabde9b33e27" wait:"253402120800"]
+---
+time 1704112465
+old [description:"Re-read W3Schools Machine Learning tutorial carefully" entry:"1704112409" modified:"1704112409" priority:"L" project:"Misc" status:"pending" uuid:"ac6d601c-7690-4da5-850d-dabde9b33e27" wait:"253402120800"]
+new [annotation_1704112465:"https:\/\/www.w3schools.com\/python\/python_ml_getting_started.asp" description:"Re-read W3Schools Machine Learning tutorial carefully" entry:"1704112409" modified:"1704112465" priority:"L" project:"Misc" status:"pending" uuid:"ac6d601c-7690-4da5-850d-dabde9b33e27" wait:"253402120800"]
+---
+time 1704112564
+old [annotation_1704112465:"https:\/\/www.w3schools.com\/python\/python_ml_getting_started.asp" description:"Re-read W3Schools Machine Learning tutorial carefully" entry:"1704112409" modified:"1704112465" priority:"L" project:"Misc" status:"pending" uuid:"ac6d601c-7690-4da5-850d-dabde9b33e27" wait:"253402120800"]
+new [annotation_1704112465:"https:\/\/www.w3schools.com\/python\/python_ml_getting_started.asp" description:"Re-read W3Schools Machine Learning tutorial carefully" entry:"1704112409" modified:"1704112564" priority:"L" project:"Misc" status:"pending" uuid:"ac6d601c-7690-4da5-850d-dabde9b33e27"]
+---
+time 1704112619
+old [annotation_1704112465:"https:\/\/www.w3schools.com\/python\/python_ml_getting_started.asp" description:"Re-read W3Schools Machine Learning tutorial carefully" entry:"1704112409" modified:"1704112564" priority:"L" project:"Misc" status:"pending" uuid:"ac6d601c-7690-4da5-850d-dabde9b33e27"]
+new [annotation_1704112465:"https:\/\/www.w3schools.com\/python\/python_ml_getting_started.asp" description:"Re-read W3Schools Machine Learning tutorial carefully" entry:"1704112409" modified:"1704112619" priority:"L" project:"Misc" status:"pending" uuid:"ac6d601c-7690-4da5-850d-dabde9b33e27" wait:"253402120800"]
+---
+time 1704190435
+old [description:"Investigate ways to improve vscode experience" entry:"1701681720" modified:"1701959398" priority:"M" project:"Env" status:"pending" tags:"next" tags_next:"x" uuid:"6a4d49f6-f438-4437-9d93-fd81ce682cd5"]
+new [description:"Investigate ways to improve vscode experience" entry:"1701681720" modified:"1704190435" priority:"H" project:"Env" status:"pending" tags:"next" tags_next:"x" uuid:"6a4d49f6-f438-4437-9d93-fd81ce682cd5"]
+---
+time 1704215467
+new [description:"Read VSCode docs" entry:"1704215467" modified:"1704215467" priority:"H" project:"VSCode" status:"pending" uuid:"e2afa339-09f9-49a3-8ea6-697ff41f1c9b"]
+---
+time 1704215495
+old [description:"Read VSCode docs" entry:"1704215467" modified:"1704215467" priority:"H" project:"VSCode" status:"pending" uuid:"e2afa339-09f9-49a3-8ea6-697ff41f1c9b"]
+new [annotation_1704215495:"https:\/\/code.visualstudio.com\/docs" description:"Read VSCode docs" entry:"1704215467" modified:"1704215495" priority:"H" project:"VSCode" status:"pending" uuid:"e2afa339-09f9-49a3-8ea6-697ff41f1c9b"]
+---
+time 1704215584
+new [description:"Read VSCode blog" entry:"1704215584" modified:"1704215584" priority:"M" project:"VSCode" status:"pending" uuid:"9dad91ce-95d4-4ca8-baf7-0abeef1f7f5f"]
+---
+time 1704215615
+old [description:"Read VSCode blog" entry:"1704215584" modified:"1704215584" priority:"M" project:"VSCode" status:"pending" uuid:"9dad91ce-95d4-4ca8-baf7-0abeef1f7f5f"]
+new [annotation_1704215615:"https:\/\/code.visualstudio.com\/blogs\/2023\/11\/13\/vscode-copilot-smarter" description:"Read VSCode blog" entry:"1704215584" modified:"1704215615" priority:"M" project:"VSCode" status:"pending" uuid:"9dad91ce-95d4-4ca8-baf7-0abeef1f7f5f"]
+---
+time 1704215651
+new [description:"Research VSCode extensions" entry:"1704215651" modified:"1704215651" priority:"M" project:"VSCode" status:"pending" uuid:"4698920d-905d-4a93-9f3b-5dc5259e6c80"]
+---
+time 1704215847
+new [description:"Watch 'Mastering Visual Studio Code' Udemy course" entry:"1704215847" modified:"1704215847" priority:"H" project:"VSCode" status:"pending" uuid:"0ec9d4e2-3f00-49a6-a2bf-b24a51aea3e6"]
+---
+time 1704215863
+old [description:"Watch 'Mastering Visual Studio Code' Udemy course" entry:"1704215847" modified:"1704215847" priority:"H" project:"VSCode" status:"pending" uuid:"0ec9d4e2-3f00-49a6-a2bf-b24a51aea3e6"]
+new [annotation_1704215863:"https:\/\/softserve.udemy.com\/course\/mastering-visual-studio-code\/" description:"Watch 'Mastering Visual Studio Code' Udemy course" entry:"1704215847" modified:"1704215863" priority:"H" project:"VSCode" status:"pending" uuid:"0ec9d4e2-3f00-49a6-a2bf-b24a51aea3e6"]
+---
+time 1704215885
+old [description:"Research VSCode extensions" entry:"1704215651" modified:"1704215651" priority:"M" project:"VSCode" status:"pending" uuid:"4698920d-905d-4a93-9f3b-5dc5259e6c80"]
+new [annotation_1704215885:"https:\/\/marketplace.visualstudio.com\/VSCode" description:"Research VSCode extensions" entry:"1704215651" modified:"1704215885" priority:"M" project:"VSCode" status:"pending" uuid:"4698920d-905d-4a93-9f3b-5dc5259e6c80"]
+---
+time 1704215953
+new [description:"Watch 'VSCode for Developers 2024' Udemy course" entry:"1704215953" modified:"1704215953" priority:"H" project:"VSCode" status:"pending" uuid:"12df5eb1-fc0b-4ac7-a4f1-bf6450654fd1"]
+---
+time 1704215977
+old [description:"Watch 'VSCode for Developers 2024' Udemy course" entry:"1704215953" modified:"1704215953" priority:"H" project:"VSCode" status:"pending" uuid:"12df5eb1-fc0b-4ac7-a4f1-bf6450654fd1"]
+new [annotation_1704215977:"https:\/\/softserve.udemy.com\/course\/learn-visual-studio-code-vscode-course\/" description:"Watch 'VSCode for Developers 2024' Udemy course" entry:"1704215953" modified:"1704215977" priority:"H" project:"VSCode" status:"pending" uuid:"12df5eb1-fc0b-4ac7-a4f1-bf6450654fd1"]
+---
+time 1704217011
+new [description:"Watch 'VSCode Tutorial' by Freecodecamp" entry:"1704217011" modified:"1704217011" priority:"H" project:"VSCode" status:"pending" uuid:"815ce5f7-6766-4d04-b323-7c76a68a9ec5"]
+---
+time 1704217021
+old [description:"Watch 'VSCode Tutorial' by Freecodecamp" entry:"1704217011" modified:"1704217011" priority:"H" project:"VSCode" status:"pending" uuid:"815ce5f7-6766-4d04-b323-7c76a68a9ec5"]
+new [annotation_1704217021:"https:\/\/www.youtube.com\/watch?v=heXQnM99oAI" description:"Watch 'VSCode Tutorial' by Freecodecamp" entry:"1704217011" modified:"1704217021" priority:"H" project:"VSCode" status:"pending" uuid:"815ce5f7-6766-4d04-b323-7c76a68a9ec5"]
+---
+time 1704217063
+new [description:"Watch VSCode youtube videos" entry:"1704217063" modified:"1704217063" priority:"H" project:"VSCode" status:"pending" uuid:"b8d4a79e-535d-4a6a-a2b0-980f85cc3f0d"]
+---
+time 1704217083
+old [description:"Watch VSCode youtube videos" entry:"1704217063" modified:"1704217063" priority:"H" project:"VSCode" status:"pending" uuid:"b8d4a79e-535d-4a6a-a2b0-980f85cc3f0d"]
+new [annotation_1704217083:"https:\/\/www.youtube.com\/results?search_query=vs+code+tips+and+tricks" description:"Watch VSCode youtube videos" entry:"1704217063" modified:"1704217083" priority:"H" project:"VSCode" status:"pending" uuid:"b8d4a79e-535d-4a6a-a2b0-980f85cc3f0d"]
+---
+time 1704217580
+new [description:"Review awesome-vscode repo" entry:"1704217580" modified:"1704217580" priority:"H" project:"VSCode" status:"pending" uuid:"400d6305-d1bb-41bf-aeb9-35d3fc08c091"]
+---
+time 1704217596
+old [description:"Review awesome-vscode repo" entry:"1704217580" modified:"1704217580" priority:"H" project:"VSCode" status:"pending" uuid:"400d6305-d1bb-41bf-aeb9-35d3fc08c091"]
+new [annotation_1704217596:"https:\/\/github.com\/viatsko\/awesome-vscode" description:"Review awesome-vscode repo" entry:"1704217580" modified:"1704217596" priority:"H" project:"VSCode" status:"pending" uuid:"400d6305-d1bb-41bf-aeb9-35d3fc08c091"]
+---
+time 1704218514
+new [description:"Read VSCode+Vim setup article" entry:"1704218514" modified:"1704218514" priority:"M" project:"VSCode" status:"pending" uuid:"c7531016-e602-4705-acb3-cbdd559b7a76"]
+---
+time 1704218524
+old [description:"Read VSCode+Vim setup article" entry:"1704218514" modified:"1704218514" priority:"M" project:"VSCode" status:"pending" uuid:"c7531016-e602-4705-acb3-cbdd559b7a76"]
+new [annotation_1704218524:"https:\/\/mario-gunawan.medium.com\/vscode-vim-setup-its-not-as-easy-as-you-think-b8d1d97e8b13" description:"Read VSCode+Vim setup article" entry:"1704218514" modified:"1704218524" priority:"M" project:"VSCode" status:"pending" uuid:"c7531016-e602-4705-acb3-cbdd559b7a76"]
+---
+time 1704219680
+new [description:"Read various VS Code articles" entry:"1704219680" modified:"1704219680" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+---
+time 1704219690
+old [description:"Read various VS Code articles" entry:"1704219680" modified:"1704219680" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+new [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219690" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+---
+time 1704219703
+old [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219690" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+new [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" annotation_1704219703:"https:\/\/quickref.me\/vscode.html" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219703" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+---
+time 1704219713
+old [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" annotation_1704219703:"https:\/\/quickref.me\/vscode.html" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219703" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+new [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" annotation_1704219703:"https:\/\/quickref.me\/vscode.html" annotation_1704219713:"https:\/\/webreference.com\/cheat-sheets\/vscode\/" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219713" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+---
+time 1704219731
+old [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" annotation_1704219703:"https:\/\/quickref.me\/vscode.html" annotation_1704219713:"https:\/\/webreference.com\/cheat-sheets\/vscode\/" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219713" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+new [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" annotation_1704219703:"https:\/\/quickref.me\/vscode.html" annotation_1704219713:"https:\/\/webreference.com\/cheat-sheets\/vscode\/" annotation_1704219731:"https:\/\/github.com\/LeCoupa\/awesome-cheatsheets" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219731" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+---
+time 1704219746
+old [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" annotation_1704219703:"https:\/\/quickref.me\/vscode.html" annotation_1704219713:"https:\/\/webreference.com\/cheat-sheets\/vscode\/" annotation_1704219731:"https:\/\/github.com\/LeCoupa\/awesome-cheatsheets" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219731" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+new [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" annotation_1704219703:"https:\/\/quickref.me\/vscode.html" annotation_1704219713:"https:\/\/webreference.com\/cheat-sheets\/vscode\/" annotation_1704219731:"https:\/\/github.com\/LeCoupa\/awesome-cheatsheets" annotation_1704219746:"https:\/\/github.com\/LeCoupa\/awesome-cheatsheets\/blob\/master\/tools\/vscode.md" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219746" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+---
+time 1704219764
+old [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" annotation_1704219703:"https:\/\/quickref.me\/vscode.html" annotation_1704219713:"https:\/\/webreference.com\/cheat-sheets\/vscode\/" annotation_1704219731:"https:\/\/github.com\/LeCoupa\/awesome-cheatsheets" annotation_1704219746:"https:\/\/github.com\/LeCoupa\/awesome-cheatsheets\/blob\/master\/tools\/vscode.md" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219746" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+new [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" annotation_1704219703:"https:\/\/quickref.me\/vscode.html" annotation_1704219713:"https:\/\/webreference.com\/cheat-sheets\/vscode\/" annotation_1704219731:"https:\/\/github.com\/LeCoupa\/awesome-cheatsheets" annotation_1704219746:"https:\/\/github.com\/LeCoupa\/awesome-cheatsheets\/blob\/master\/tools\/vscode.md" annotation_1704219764:"https:\/\/www.maketecheasier.com\/cheatsheet\/vscode-keyboard-shortcuts\/" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219764" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+---
+time 1704219959
+old [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" annotation_1704219703:"https:\/\/quickref.me\/vscode.html" annotation_1704219713:"https:\/\/webreference.com\/cheat-sheets\/vscode\/" annotation_1704219731:"https:\/\/github.com\/LeCoupa\/awesome-cheatsheets" annotation_1704219746:"https:\/\/github.com\/LeCoupa\/awesome-cheatsheets\/blob\/master\/tools\/vscode.md" annotation_1704219764:"https:\/\/www.maketecheasier.com\/cheatsheet\/vscode-keyboard-shortcuts\/" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219764" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040"]
+new [annotation_1704219690:"https:\/\/www.crio.do\/blog\/vs-code-shortcuts\/" annotation_1704219703:"https:\/\/quickref.me\/vscode.html" annotation_1704219713:"https:\/\/webreference.com\/cheat-sheets\/vscode\/" annotation_1704219731:"https:\/\/github.com\/LeCoupa\/awesome-cheatsheets" annotation_1704219746:"https:\/\/github.com\/LeCoupa\/awesome-cheatsheets\/blob\/master\/tools\/vscode.md" annotation_1704219764:"https:\/\/www.maketecheasier.com\/cheatsheet\/vscode-keyboard-shortcuts\/" description:"Read various VS Code articles" entry:"1704219680" modified:"1704219959" priority:"M" project:"VSCode" status:"pending" uuid:"8f0bb703-b8da-4673-a432-e2b2f3cce040" wait:"253402120800"]
+---
+time 1704219971
+old [description:"Investigate ways to improve vscode experience" entry:"1701681720" modified:"1704190435" priority:"H" project:"Env" status:"pending" tags:"next" tags_next:"x" uuid:"6a4d49f6-f438-4437-9d93-fd81ce682cd5"]
+new [description:"done" entry:"1701681720" modified:"1704219971" priority:"H" project:"Env" status:"pending" tags:"next" tags_next:"x" uuid:"6a4d49f6-f438-4437-9d93-fd81ce682cd5"]
+---
+time 1704220025
+old [description:"done" entry:"1701681720" modified:"1704219971" priority:"H" project:"Env" status:"pending" tags:"next" tags_next:"x" uuid:"6a4d49f6-f438-4437-9d93-fd81ce682cd5"]
+new [description:"Research ways to improve VSCode experience" entry:"1701681720" modified:"1704220025" priority:"H" project:"Env" status:"pending" tags:"next" tags_next:"x" uuid:"6a4d49f6-f438-4437-9d93-fd81ce682cd5"]
+---
+time 1704220101
+old [description:"Research ways to improve VSCode experience" entry:"1701681720" modified:"1704220025" priority:"H" project:"Env" status:"pending" tags:"next" tags_next:"x" uuid:"6a4d49f6-f438-4437-9d93-fd81ce682cd5"]
+new [description:"Research ways to improve VSCode experience" end:"1704220101" entry:"1701681720" modified:"1704220101" priority:"H" project:"Env" status:"completed" tags:"next" tags_next:"x" uuid:"6a4d49f6-f438-4437-9d93-fd81ce682cd5"]
+---
+time 1704220127
+old [annotation_1704215863:"https:\/\/softserve.udemy.com\/course\/mastering-visual-studio-code\/" description:"Watch 'Mastering Visual Studio Code' Udemy course" entry:"1704215847" modified:"1704215863" priority:"H" project:"VSCode" status:"pending" uuid:"0ec9d4e2-3f00-49a6-a2bf-b24a51aea3e6"]
+new [annotation_1704215863:"https:\/\/softserve.udemy.com\/course\/mastering-visual-studio-code\/" description:"Watch 'Mastering Visual Studio Code' Udemy course" entry:"1704215847" modified:"1704220127" priority:"H" project:"VSCode" status:"pending" tags:"next" tags_next:"x" uuid:"0ec9d4e2-3f00-49a6-a2bf-b24a51aea3e6"]
+---
+time 1704220306
+old [annotation_1704215863:"https:\/\/softserve.udemy.com\/course\/mastering-visual-studio-code\/" description:"Watch 'Mastering Visual Studio Code' Udemy course" entry:"1704215847" modified:"1704220127" priority:"H" project:"VSCode" status:"pending" tags:"next" tags_next:"x" uuid:"0ec9d4e2-3f00-49a6-a2bf-b24a51aea3e6"]
+new [annotation_1704215863:"https:\/\/softserve.udemy.com\/course\/mastering-visual-studio-code\/" description:"Watch 'Mastering Visual Studio Code' Udemy course" entry:"1704215847" modified:"1704220306" priority:"H" project:"VSCode" start:"1704220306" status:"pending" tags:"next" tags_next:"x" uuid:"0ec9d4e2-3f00-49a6-a2bf-b24a51aea3e6"]
+---
+time 1704466841
+old [annotation_1700070782:"https:\/\/www.w3schools.com\/python\/default.asp" description:"Read w3schools Python" entry:"1698948754" modified:"1701069307" priority:"M" project:"Python" start:"1700677763" status:"pending" tags:"docs,next" tags_docs:"x" tags_next:"x" uuid:"8937514a-b421-42da-a9c3-2c2ace8b1fa9"]
+new [annotation_1700070782:"https:\/\/www.w3schools.com\/python\/default.asp" description:"Read w3schools Python" end:"1704466841" entry:"1698948754" modified:"1704466841" priority:"M" project:"Python" status:"completed" tags:"docs,next" tags_docs:"x" tags_next:"x" uuid:"8937514a-b421-42da-a9c3-2c2ace8b1fa9"]
+---
+time 1704466866
+old [annotation_1699296028:"https:\/\/javascript.info\/" description:"Read javascript.info" entry:"1699296006" modified:"1701959352" priority:"M" project:"Web" status:"pending" tags:"next" tags_next:"x" uuid:"d5036c24-080d-418a-9fd9-c63ccc2a891a"]
+new [annotation_1699296028:"https:\/\/javascript.info\/" description:"Read javascript.info" entry:"1699296006" modified:"1704466866" priority:"M" project:"Web" start:"1704466866" status:"pending" tags:"next" tags_next:"x" uuid:"d5036c24-080d-418a-9fd9-c63ccc2a891a"]
+---
+time 1704466896
+old [description:"Improve rofi configuration" entry:"1699297730" modified:"1701959369" priority:"M" project:"Arch" status:"pending" tags:"next" tags_next:"x" uuid:"4f796c4e-4740-45dc-8ed9-7377e5465075"]
+new [description:"Improve rofi configuration" entry:"1699297730" modified:"1704466896" priority:"M" project:"Arch" start:"1704466896" status:"pending" tags:"next" tags_next:"x" uuid:"4f796c4e-4740-45dc-8ed9-7377e5465075"]
+---
+time 1704737623
+old [annotation_1699385342:"https:\/\/neovim.io\/doc\/user\/" description:"Read neovim docs" entry:"1699385336" modified:"1701069342" priority:"M" project:"Neovim" status:"pending" tags:"next" tags_next:"x" uuid:"73cbd516-ce0c-4c5b-8dfa-5e3d63fbdf30"]
+new [annotation_1699385342:"https:\/\/neovim.io\/doc\/user\/" description:"Read neovim docs" entry:"1699385336" modified:"1704737623" priority:"L" project:"Neovim" status:"pending" tags:"next" tags_next:"x" uuid:"73cbd516-ce0c-4c5b-8dfa-5e3d63fbdf30" wait:"253402120800"]
+---

@@ -307,10 +307,10 @@ awful.keyboard.append_global_keybindings({
 		awful.util.spawn("archlinux-logout")
 	end, { description = "logout menu", group = "hotkeys" }),
 	awful.key({ modkey, altkey }, "x", function()
-		awful.util.spawn("shutdown now")
+		awful.util.spawn("systemctl poweroff")
 	end, { description = "shutdown", group = "hotkeys" }),
 	awful.key({ modkey, altkey }, "r", function()
-		awful.util.spawn("reboot")
+		awful.util.spawn("systemctl reboot")
 	end, { description = "reboot", group = "hotkeys" }),
 	awful.key({ modkey }, "Escape", function()
 		awful.util.spawn("xkill")

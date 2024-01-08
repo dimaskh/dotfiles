@@ -1,9 +1,8 @@
 {
   "yaml.schemas": {
-      "file:///Users/dhurk/.vscode/extensions/atlassian.atlascode-3.0.4/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///Users/dhurk/.vscode/extensions/atlassian.atlascode-3.0.4/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "explorer.confirmDelete": false,
@@ -30,9 +29,18 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true,
-    "source.addMissingImports": true
+    "source.addMissingImports": "explicit",
+    "source.organizeImports": "explicit"
   },
   "editor.tabSize": 2,
+  "files.autoSave": "afterDelay",
+  "workbench.colorTheme": "GitHub Dark",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.list.smoothScrolling": true,
+  "editor.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true
 }
