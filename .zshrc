@@ -31,11 +31,3 @@ export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Path
-# export PATH="$HOME/.local/bin:$PATH"
-
-# Taskwarrior
-export TASKRC=~/.config/taskwarrior/.taskrc
-export TASKDATA=~/.config/taskwarrior/.task
-
