@@ -26,8 +26,5 @@ export EDITOR='nvim'
 # Starship
 eval "$(starship init zsh)"
 
-# SSH Agent
-export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
-
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
