@@ -22,13 +22,13 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id variety
 
 # Screenshot tool
-exec flameshot
+exec --no-startup-id flameshot
 
 # Picom
-exec picom -b
+exec --no-startup-id picom -b
 
 # Status bar
-exec ~/.config/polybar/launch.sh 
+exec --no-startup-id ~/.config/polybar/launch.sh 
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -113,10 +113,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+| split h
+bindsym $mod+Shift+b split h
 
 # split in vertical orientation
-bindsym $mod+_ split v
+bindsym $mod+Shift+v split v
 
 # enter fullscreen mode for the focused container bindsym $mod+f fullscreen toggle
 
@@ -189,10 +189,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
