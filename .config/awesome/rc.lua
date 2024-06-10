@@ -227,8 +227,8 @@ awful.keyboard.append_global_keybindings({
               {description = "browser", group = "applications"}),
     awful.key({ modkey }, "v", function() awful.util.spawn("pavucontrol") end,
               {description = "pavucontrol", group = "applications"}),
-    awful.key({ modkey }, "x", function() awful.util.spawn("archlinux-logout") end,
-              {description = "logout menu", group = "hotkeys"}),
+    -- awful.key({ modkey }, "x", function() awful.util.spawn("archlinux-logout") end,
+    --           {description = "logout menu", group = "hotkeys"}),
     awful.key({ modkey, altkey }, "x", function() awful.util.spawn("systemctl poweroff") end,
               {description = "shutdown", group = "hotkeys"}),
     awful.key({ modkey, altkey }, "r", function() awful.util.spawn("systemctl reboot") end,
@@ -244,7 +244,7 @@ awful.keyboard.append_global_keybindings({
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-    awful.key({ modkey }, "x",
+    awful.key({ modkey, "Control" }, "x",
               function ()
                   awful.prompt.run {
                     prompt       = "Run Lua code: ",
@@ -511,7 +511,7 @@ ruled.client.connect_signal("request::rules", function()
             instance = { "copyq", "pinentry" },
             class    = {
                 "Arandr", "Blueman-manager", "Gpick", "Kruler", "Sxiv",
-                "Tor Browser", "Wpa_gui", "veromix", "xtightvncviewer"
+                "Tor Browser", "Wpa_gui", "veromix", "xtightvncviewer", "zoom"
             },
             -- Note that the name property shown in xprop might be set slightly after creation of the client
             -- and the name shown there might not match defined rules here.
