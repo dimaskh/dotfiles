@@ -28,3 +28,6 @@ eval "$(starship init zsh)"
 
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Path
+export PATH=”$HOME/.emacs.d/bin:$PATH”
