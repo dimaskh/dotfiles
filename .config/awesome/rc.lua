@@ -217,7 +217,8 @@ awful.mouse.append_global_mousebindings({
 -- }}}
 
 -- {{{ Key bindings
-local rofi_cmd = "rofi -show drun -theme ~/.config/rofi/launchers/type-1/style-5.rasi"
+local rofi_cmd = "/home/dima/.config/rofi/launchers/type-1/launcher.sh"
+local powermenu_cmd = "/home/dima/.config/rofi/applets/bin/powermenu.sh"
 local dmenu_cmd = "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14"
 
 -- General Awesome keys
@@ -227,8 +228,10 @@ awful.keyboard.append_global_keybindings({
               {description = "browser", group = "applications"}),
     awful.key({ modkey }, "v", function() awful.util.spawn("pavucontrol") end,
               {description = "pavucontrol", group = "applications"}),
-    -- awful.key({ modkey }, "x", function() awful.util.spawn("archlinux-logout") end,
-    --           {description = "logout menu", group = "hotkeys"}),
+    awful.key({ modkey, altkey }, "l", function() awful.util.spawn("betterlockscreen -l") end,
+              {description = "lock", group = "hotkeys"}),
+    awful.key({ modkey, altkey }, "q", function() awful.util.spawn(powermenu_cmd) end,
+              {description = "powermenu", group = "hotkeys"}),
     awful.key({ modkey, altkey }, "x", function() awful.util.spawn("systemctl poweroff") end,
               {description = "shutdown", group = "hotkeys"}),
     awful.key({ modkey, altkey }, "r", function() awful.util.spawn("systemctl reboot") end,
