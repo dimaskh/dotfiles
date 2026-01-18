@@ -1,0 +1,65 @@
+{
+  "workbench.startupEditor": "none",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "explorer.confirmDelete": false,
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono', 'FiraMono Nerd Font'",
+  "terminal.explorerKind": "external",
+  "editor.fontFamily": "'FiraCode Nerd Font Mono', 'FiraMono Nerd Font', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.addMissingImports": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "biome.requireConfigFile": true,
+  "editor.codeActionsOnSaveTimeout": 3000,
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "GitHub Dark",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.list.smoothScrolling": true,
+  "editor.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "redhat.telemetry.enabled": false,
+  "window.zoomPerWindow": false,
+  "cursor.enabledLanguages": ["plaintext", "markdown"],
+  "workbench.activityBar.orientation": "vertical",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.commandCenter": true,
+  "workbench.navigationControl.enabled": false,
+  "workbench.iconTheme": "bearded-icons",
+  "window.zoomLevel": 0.75,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
+}

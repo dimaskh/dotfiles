@@ -1,0 +1,14 @@
+# SSH askpass (KDE)
+export SSH_ASKPASS=/usr/bin/ksshaskpass
+export SSH_ASKPASS_REQUIRE=prefer
+
+# ssh-agent
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+  eval "$(ssh-agent -s)" >/dev/null
+fi
+
+# NVM (Linux path)
+[[ -f /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
+
+# LM Studio
+export PATH="$PATH:$HOME/.lmstudio/bin"

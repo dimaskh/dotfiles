@@ -1,0 +1,9 @@
+[user]
+	name = Dima
+	email = dimaskh.dev@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+[url "git@github.com:"]
+	insteadOf = https://github.com/

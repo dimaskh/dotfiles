@@ -1,0 +1,53 @@
+# General aliases
+alias vim='nvim'
+alias hs='history | grep'
+alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
+alias myip="curl http://ipecho.net/plain; echo"
+alias reload="source ~/.zshrc"
+
+# List aliases
+alias ls="ls --color=auto"
+alias la="ls -a"
+alias ll="ls -alFh"
+alias l="ls"
+alias l.="ls -A | egrep '^\.'"
+
+# Utility aliases
+alias df="df -h"
+
+# Git aliases
+alias gcm='git commit -m'
+alias gac="git add . && git commit -a -m "
+alias gpu="git push upstream"
+alias glu="git pull upstream"
+
+# Tmux aliases
+alias t="tmux"
+alias ta="t a -t"
+alias tls="t ls"
+alias tns="t new -s"
+alias tnt="t new -t"
+alias tx="tmuxinator"
+
+# NPM aliases
+alias nis="npm install --save"
+
+# Dotfiles
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias df="dotfiles"
+alias dfs="dotfiles status"
+alias dfa="dotfiles add -u"
+alias dfcm="dotfiles commit -m"
+alias dfp="dotfiles push"
+alias dfl="dotfiles pull"
+
+# Pacman
+alias pacman="sudo pacman --color auto"
+alias sps="sudo pacman -S"
+alias spr="sudo pacman -R"
+alias sprs="sudo pacman -Rs"
+alias sprdd="sudo pacman -Rdd"
+alias spqo="sudo pacman -Qo"
+alias spsii="sudo pacman -Sii"
+alias update="sudo pacman -Syyu"
+alias upd="sudo pacman -Syyu"

@@ -1,0 +1,41 @@
+# OS-specific
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE/Editor
+.vscode/
+.idea/
+*.sublime-*
+
+# Sensitive data
+.env
+*.pem
+*.key
+id_rsa*
+
+# Local overrides
+.zshrc.local
+.gitconfig.local
+.zprofile.local
+
+# Temporary/cache
+.cache/
+.node_repl_history/
+.python_history/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Package managers
+node_modules/
+bower_components/
+
+# Machine-specific
+.ssh/known_hosts
+.gnupg/

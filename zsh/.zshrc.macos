@@ -1,0 +1,2 @@
+# NVM (Homebrew)
+[[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]] && source "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
