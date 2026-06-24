@@ -12,3 +12,5 @@ fd
 fzf
 zoxide
 starship
+man-db
+man-pages
