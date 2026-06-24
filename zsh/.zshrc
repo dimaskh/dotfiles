@@ -1,10 +1,10 @@
-# Aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
-
 # Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 plugins=(archlinux git docker docker-compose sudo zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
+
+# Aliases (sourced AFTER OMZ so our eza/modern aliases override OMZ's ls/ll/la/l defaults)
+[[ -f ~/.aliases ]] && source ~/.aliases
 
 # Prompt
 eval "$(starship init zsh)"
