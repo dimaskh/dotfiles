@@ -32,15 +32,6 @@ alias tx="tmuxinator"
 # NPM aliases
 alias nis="npm install --save"
 
-# Dotfiles
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias df="dotfiles"
-alias dfs="dotfiles status"
-alias dfa="dotfiles add -u"
-alias dfcm="dotfiles commit -m"
-alias dfp="dotfiles push"
-alias dfl="dotfiles pull"
-
 # Pacman
 alias pacman="sudo pacman --color auto"
 alias sps="sudo pacman -S"
