@@ -1,0 +1,14 @@
+git-delta
+lazygit
+atuin
+dust
+duf
+procs
+yazi
+hyperfine
+eza
+bat
+fd
+fzf
+zoxide
+starship

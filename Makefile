@@ -5,7 +5,7 @@ DOTFILES := $(HOME)/.dotfiles
 PACKAGES := zsh git ghostty cursor
 STOW     := stow --dir=$(DOTFILES) --target=$(HOME)
 
-.PHONY: help link unlink restow status add
+.PHONY: help link unlink restow status add tools
 
 help:
 	@echo "Dotfiles (GNU stow) — targets:"
@@ -14,6 +14,7 @@ help:
 	@echo "  make restow                     re-link all packages (after adding files)"
 	@echo "  make status                     dry-run: show what stow would change"
 	@echo "  make add pkg=<p> path=<file>    move a live file into package <p> and re-link"
+	@echo "  make tools                      install the CLI tools from packages.txt (sudo)"
 
 link:
 	$(STOW) $(PACKAGES)
@@ -44,3 +45,8 @@ add:
 	echo "moved $$abs -> $$dest"; \
 	$(STOW) -R "$(pkg)"; \
 	echo "re-linked package: $(pkg)"
+
+# Install the modern CLI tool set (idempotent; --needed skips installed packages).
+# Run interactively — sudo prompts for a password.
+tools:
+	sudo pacman -S --needed - < $(DOTFILES)/packages.txt
