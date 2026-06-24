@@ -5,6 +5,7 @@
 	defaultBranch = main
 [core]
 	editor = nvim
+	pager = delta
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 # NOTE: url.insteadOf above rewrites https://github.com/ → git@github.com: for git operations.
@@ -16,3 +17,29 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/usr/bin/gh auth git-credential
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	line-numbers = true
+	side-by-side = false
+[merge]
+	conflictstyle = zdiff3
+[diff]
+	colorMoved = default
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+	default = current
+[fetch]
+	prune = true
+[rerere]
+	enabled = true
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
+[alias]
+	lg = log --graph --oneline --decorate --all
+	st = status -sb
