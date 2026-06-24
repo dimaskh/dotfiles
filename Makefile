@@ -36,6 +36,7 @@ status:
 add:
 	@test -n "$(pkg)" -a -n "$(path)" || { echo "usage: make add pkg=<package> path=~/.config/foo/bar"; exit 1; }
 	@abs=$$(readlink -f "$(path)"); \
+	test ! -L "$(path)" || { echo "error: $(path) is already a symlink (already managed?)"; exit 1; }; \
 	rel=$${abs#$(HOME)/}; \
 	dest="$(DOTFILES)/$(pkg)/$$rel"; \
 	mkdir -p "$$(dirname "$$dest")"; \

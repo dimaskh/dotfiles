@@ -7,6 +7,9 @@
 	editor = nvim
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+# NOTE: url.insteadOf above rewrites https://github.com/ → git@github.com: for git operations.
+# These credential helpers are therefore bypassed for git on github.com/gist.github.com.
+# They remain here for tools that invoke gh CLI or HTTPS directly, bypassing url rewrites.
 [credential "https://github.com"]
 	helper =
 	helper = !/usr/bin/gh auth git-credential

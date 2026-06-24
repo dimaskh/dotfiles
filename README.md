@@ -1,6 +1,6 @@
 # Dotfiles
 
-Personal configuration files for Linux and macOS. Deliberately managed as a plain Git repository with manual symlinking - simple, transparent, and under control.
+Personal configuration files for Linux and macOS, managed with GNU stow — simple, transparent, and under control.
 
 ## Philosophy
 
@@ -12,15 +12,13 @@ magic — with a `Makefile` so day-to-day management is one command.
 
 ```
 ~/.dotfiles/
-├── zsh/              # Zsh shell configurations
-│   ├── .zshrc       # Main Zsh config
-│   ├── .aliases     # Shell aliases
-│   ├── .zshrc.linux # Linux-specific config
-│   └── .zshrc.macos # macOS-specific config
-├── git/
-│   └── .gitconfig   # Git configuration
-└── cursor/
-    └── settings.json # Cursor/VS Code settings
+├── Makefile          # stow management layer
+├── CLAUDE.md         # conventions for AI sessions
+├── README.md
+├── zsh/              # → ~/.zshrc, ~/.aliases, ~/.zshrc.linux, ~/.zshrc.macos
+├── git/              # → ~/.gitconfig
+├── ghostty/          # → ~/.config/ghostty/config
+└── cursor/           # → ~/.config/Cursor/User/settings.json
 ```
 
 ## Installation
@@ -146,10 +144,10 @@ These are recommended tools and configurations to consider adding as you expand 
 
 ## Workflow
 
-1. Make changes to your config files
-2. Push to repository: `git add . && git commit -m "message" && git push`
-3. On other computers: `git pull` to update
-4. Symlink new files only when you're ready
+1. Edit config files **in the repo** (`~/.dotfiles/<package>/...`) — the live path is a symlink.
+2. `make restow` if you added new files to a package.
+3. Commit and push when ready (never push without being asked on a shared machine).
+4. To bring a new live file under management: `make add pkg=<package> path=<file>`.
 
 ## License
 
