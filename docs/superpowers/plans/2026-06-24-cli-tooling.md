@@ -118,7 +118,7 @@ tools:
 
 ```bash
 test -f ~/.dotfiles/packages.txt && echo "manifest OK"
-wc -l < ~/.dotfiles/packages.txt                 # expect: 14
+wc -l < ~/.dotfiles/packages.txt                 # expect: 16 (incl. man-db, man-pages added in activation)
 make -C ~/.dotfiles -n tools                     # expect: prints "sudo pacman -S --needed - < /home/dima/.dotfiles/packages.txt"
 make -C ~/.dotfiles help | grep -c 'make tools'  # expect: 1
 ```
