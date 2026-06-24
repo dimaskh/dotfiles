@@ -4,7 +4,9 @@ Personal configuration files for Linux and macOS. Deliberately managed as a plai
 
 ## Philosophy
 
-This repo uses a simple approach: clone the repository, then symlink only the configuration files you actually need. No automation, no magic - just intentional control over what goes where.
+Managed with GNU stow: configs live in topic packages under `~/.dotfiles`, and
+stow symlinks them into `$HOME`. Simple and transparent — symlinks, no rendering
+magic — with a `Makefile` so day-to-day management is one command.
 
 ## Structure
 
@@ -23,54 +25,24 @@ This repo uses a simple approach: clone the repository, then symlink only the co
 
 ## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone git@github.com:dima-skhl/dotfiles.git ~/.dotfiles
-   cd ~/.dotfiles
-   ```
-
-2. Symlink configuration files as needed:
-   ```bash
-   # Zsh
-   ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
-   ln -s ~/.dotfiles/zsh/.aliases ~/.aliases
-   ln -s ~/.dotfiles/zsh/.zshrc.linux ~/.zshrc.linux  # Arch only
-   ln -s ~/.dotfiles/zsh/.zshrc.macos ~/.zshrc.macos  # macOS only
-   
-   # Git
-   ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
-   
-   # Cursor
-   mkdir -p ~/.config/Cursor/User
-   ln -s ~/.dotfiles/cursor/settings.json ~/.config/Cursor/User/settings.json
-   ```
-
-3. Install dependencies:
-   - **Zsh**: Install [Oh My Zsh](https://ohmyz.sh/), [Starship](https://starship.rs/), [Zoxide](https://github.com/ajeetdsouza/zoxide)
-   - **Zsh Plugins**: `zsh-autosuggestions`, `zsh-syntax-highlighting`
-   - **Tmux**: Install Tmux and Tmuxinator
-   - **NVM**: Install [nvm](https://github.com/nvm-sh/nvm)
-
-4. Reload your shell:
-   ```bash
-   source ~/.zshrc
-   ```
-
-## Multi-Computer Setup
-
-This repo supports both Arch Linux and macOS:
-
-### Arch Linux
 ```bash
-ln -s ~/.dotfiles/zsh/.zshrc.linux ~/.zshrc.linux
+git clone git@github.com:dimaskh/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+make link        # symlinks every package into $HOME
 ```
 
-### macOS
-```bash
-ln -s ~/.dotfiles/zsh/.zshrc.macos ~/.zshrc.macos
-```
+Machine-specific or private shell config (e.g. work aliases) goes in
+`~/.zshrc.local`, which is gitignored and sourced by `.zshrc`.
 
-Each computer only symlinks what it needs - shared configs go in the main files, platform-specific in their respective files.
+## Usage
+
+| Command | Action |
+|---------|--------|
+| `make link` | Symlink all packages into `$HOME` |
+| `make unlink` | Remove all symlinks |
+| `make restow` | Re-link (after adding files) |
+| `make status` | Show what stow would change |
+| `make add pkg=<p> path=<file>` | Bring a live file under management |
 
 ## Tools Used
 
