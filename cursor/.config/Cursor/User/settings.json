@@ -43,6 +43,7 @@
   "workbench.list.smoothScrolling": true,
   "editor.smoothScrolling": true,
   "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.gpuAcceleration": "canvas",
   "redhat.telemetry.enabled": false,
   "window.zoomPerWindow": false,
   "cursor.enabledLanguages": ["plaintext", "markdown"],
