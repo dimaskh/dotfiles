@@ -170,7 +170,7 @@ with:
 # Aliases (sourced AFTER OMZ so our eza/modern aliases override OMZ's ls/ll/la/l defaults)
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-# tmux workspace helpers (tmux_workspace, ws) — used by the private TrackGuard aliases in ~/.zshrc.local
+# tmux workspace helpers (tmux_workspace, ws) — used by the private per-project workspace aliases in ~/.zshrc.local
 [[ -f ~/.functions ]] && source ~/.functions
 ```
 
