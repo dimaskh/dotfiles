@@ -159,7 +159,7 @@ A new function, e.g. `ws` (workspace switch), added to `zsh/.functions`:
 ```sh
 ws() {
   local target
-  target=$(tmux list-sessions -F '#S' 2>/dev/null | fzf --prompt="workspace> ") || return
+  target=$(tmux list-sessions -F '#S' 2>/dev/null | fzf --prompt="workspace> " --no-preview) || return
   if [ -n "$TMUX" ]; then
     tmux switch-client -t "$target"
   else
@@ -242,7 +242,9 @@ precise JSON shape should be confirmed rather than assumed.
 - `tmux source-file ~/.tmux.conf` applies with no errors.
 - Fully reversible: `git revert` of the Phase 2 commits + `make restow`
   restores the prior (no-multiplexer) state; `~/.zshrc.local` reverts by
-  hand since it isn't tracked here.
+  hand since it isn't tracked here. Run `stow -D tmux` *before* reverting —
+  otherwise `tmux` drops out of `Makefile`'s `PACKAGES` first and the later
+  `make restow` never unlinks it, leaving `~/.tmux.conf` a dangling symlink.
 
 ### 3.8 Out of scope (YAGNI)
 

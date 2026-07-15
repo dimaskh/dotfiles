@@ -21,7 +21,7 @@
 - `tx` (tmuxinator) alias is dropped — confirmed not installed. `t`/`ta`/`tls`/`tns`/`tnt` are kept as-is.
 - `zsh/.functions` must contain **zero project-specific names/paths** — all private data (`TG_UMCP`, project names, etc.) lives only in `~/.zshrc.local`, never committed.
 - `~/.zshrc.local` and `~/.claude/settings.json` are edited directly but **never** `git add`/`git commit`ed from `~/.dotfiles` — they are outside this repo.
-- Reversible: every repo change is committed; `git revert` + `make restow` restores the prior state.
+- Reversible: every repo change is committed; `git revert` + `make restow` restores the prior state. **Order matters:** run `stow -D tmux` (or `make unlink` then `make link` on the remaining packages) *before* reverting — reverting first drops `tmux` from `Makefile`'s `PACKAGES` list, so a later `make restow` never runs `stow -D tmux` and `~/.tmux.conf` is left as a dangling symlink to the now-deleted `tmux/.tmux.conf`.
 
 ---
 
@@ -148,7 +148,7 @@ tmux_workspace() {
 # ws: fzf-pick among currently running tmux sessions and switch/attach to it.
 ws() {
 	local target
-	target=$(tmux list-sessions -F '#S' 2>/dev/null | fzf --prompt="workspace> ") || return
+	target=$(tmux list-sessions -F '#S' 2>/dev/null | fzf --prompt="workspace> " --no-preview) || return
 	if [ -n "$TMUX" ]; then
 		tmux switch-client -t "$target"
 	else
