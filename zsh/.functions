@@ -15,7 +15,7 @@ tmux_workspace() {
 # ws: fzf-pick among currently running tmux sessions and switch/attach to it.
 ws() {
 	local target
-	target=$(tmux list-sessions -F '#S' 2>/dev/null | fzf --prompt="workspace> ") || return
+	target=$(tmux list-sessions -F '#S' 2>/dev/null | fzf --prompt="workspace> " --no-preview) || return
 	if [ -n "$TMUX" ]; then
 		tmux switch-client -t "$target"
 	else
