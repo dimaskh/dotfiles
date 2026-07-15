@@ -33,7 +33,6 @@ alias ta="t a -t"
 alias tls="t ls"
 alias tns="t new -s"
 alias tnt="t new -t"
-alias tx="tmuxinator"
 
 # NPM aliases
 alias nis="npm install --save"
