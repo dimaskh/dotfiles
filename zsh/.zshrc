@@ -6,6 +6,9 @@ source $ZSH/oh-my-zsh.sh
 # Aliases (sourced AFTER OMZ so our eza/modern aliases override OMZ's ls/ll/la/l defaults)
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+# tmux workspace helpers (tmux_workspace, ws) — used by the private TrackGuard aliases in ~/.zshrc.local
+[[ -f ~/.functions ]] && source ~/.functions
+
 # Prompt
 eval "$(starship init zsh)"
 

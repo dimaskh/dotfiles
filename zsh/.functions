@@ -1,0 +1,24 @@
+# tmux_workspace: create-or-switch a named tmux session pinned to a directory,
+# running <cmd> only the first time the session is created.
+tmux_workspace() {
+	local name="$1" dir="$2"
+	shift 2
+	local cmd="$*"
+	if [ -n "$TMUX" ]; then
+		tmux has-session -t "$name" 2>/dev/null || tmux new-session -d -s "$name" -c "$dir" ${cmd:+"$cmd"}
+		tmux switch-client -t "$name"
+	else
+		tmux new-session -A -s "$name" -c "$dir" ${cmd:+"$cmd"}
+	fi
+}
+
+# ws: fzf-pick among currently running tmux sessions and switch/attach to it.
+ws() {
+	local target
+	target=$(tmux list-sessions -F '#S' 2>/dev/null | fzf --prompt="workspace> ") || return
+	if [ -n "$TMUX" ]; then
+		tmux switch-client -t "$target"
+	else
+		tmux attach -t "$target"
+	fi
+}
