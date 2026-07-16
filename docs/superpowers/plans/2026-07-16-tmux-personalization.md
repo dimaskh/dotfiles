@@ -140,6 +140,8 @@ bind -N "reload config" r source-file ~/.tmux.conf \; display-message "tmux conf
 
 # vi-style copy-mode motions (hjkl / v to select / y to yank)
 setw -g mode-keys vi
+bind -T copy-mode-vi -N "begin selection" v send-keys -X begin-selection
+bind -T copy-mode-vi -N "copy selection and exit" y send-keys -X copy-selection-and-cancel
 ```
 
 (`-N` placement: it must come immediately after `bind`/`bind -r`, before the key character — confirmed in an isolated throwaway tmux server during Task 1's review; placing it after the command's own arguments makes tmux parse it as an argument to that command, which errors, e.g. `command split-window: unknown flag -N`.)
@@ -183,11 +185,15 @@ In `~/.dotfiles/tmux/.tmux.conf`, replace:
 ```
 # vi-style copy-mode motions (hjkl / v to select / y to yank)
 setw -g mode-keys vi
+bind -T copy-mode-vi -N "begin selection" v send-keys -X begin-selection
+bind -T copy-mode-vi -N "copy selection and exit" y send-keys -X copy-selection-and-cancel
 ```
 with:
 ```
 # vi-style copy-mode motions (hjkl / v to select / y to yank)
 setw -g mode-keys vi
+bind -T copy-mode-vi -N "begin selection" v send-keys -X begin-selection
+bind -T copy-mode-vi -N "copy selection and exit" y send-keys -X copy-selection-and-cancel
 
 # keybinding cheatsheet — lists every -N annotated bind above
 bind -N "show keybinding cheatsheet" ? display-popup -E "tmux list-keys -N | less"

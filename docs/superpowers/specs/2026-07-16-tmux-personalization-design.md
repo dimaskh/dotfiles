@@ -103,6 +103,8 @@ bind -N "reload config" r source-file ~/.tmux.conf \; display-message "tmux conf
 
 # vi-style copy-mode motions (hjkl / v to select / y to yank)
 setw -g mode-keys vi
+bind -T copy-mode-vi -N "begin selection" v send-keys -X begin-selection
+bind -T copy-mode-vi -N "copy selection and exit" y send-keys -X copy-selection-and-cancel
 ```
 
 Note: `-N` must appear immediately after `bind`/`bind-key`, before the key
@@ -185,6 +187,8 @@ bind -N "reload config" r source-file ~/.tmux.conf \; display-message "tmux conf
 bind -N "show keybinding cheatsheet" ? display-popup -E "tmux list-keys -N | less"
 
 setw -g mode-keys vi
+bind -T copy-mode-vi -N "begin selection" v send-keys -X begin-selection
+bind -T copy-mode-vi -N "copy selection and exit" y send-keys -X copy-selection-and-cancel
 
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'catppuccin/tmux'
