@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Opens a tmux-thumbs hint selection in nvim via a popup (thumbs' own default
+# action just copies text to a buffer; this needs a real tty for nvim).
+set -euo pipefail
+
+exec tmux display-popup -E -w 80% -h 80% "$HOME/.local/bin/nvim-at-line '$1'"
