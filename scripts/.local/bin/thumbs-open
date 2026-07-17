@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Opens a tmux-thumbs hint selection in nvim via a popup (thumbs' own default
+# action just copies text to a buffer; this needs a real tty for nvim).
+set -euo pipefail
+
+# display-popup does NOT default to the invoking pane's cwd (no -d = some
+# other default directory) -- without this, a relative match like
+# "docs/foo.md" resolves nowhere and nvim opens an empty buffer instead.
+# swap_panes() has already restored the original pane as active by the time
+# this script runs, so the "current" pane is the right one to ask.
+dir="$(tmux display-message -p '#{pane_current_path}')"
+
+exec tmux display-popup -E -w 80% -h 80% -d "$dir" "$HOME/.local/bin/nvim-at-line '$1'"
