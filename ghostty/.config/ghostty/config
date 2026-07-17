@@ -1,8 +1,8 @@
 theme = "Ghostty Default Style Dark"
 font-family = "FiraCode Nerd Font Mono"
 
-window-padding-x = 8
-window-padding-y = 8
+window-padding-x = 4
+window-padding-y = 4
 window-padding-balance = true
 
 # sudo only: cursor/path/title are already on by default, ssh-env/ssh-terminfo
