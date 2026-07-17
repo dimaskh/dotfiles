@@ -2,7 +2,7 @@
 # Each top-level dir (except docs/) is a stow "package" whose contents mirror $HOME.
 
 DOTFILES := $(HOME)/.dotfiles
-PACKAGES := zsh git ghostty cursor lazygit atuin tmux
+PACKAGES := zsh git ghostty cursor lazygit atuin tmux scripts
 STOW     := stow --dir=$(DOTFILES) --target=$(HOME)
 
 .PHONY: help link unlink restow status add tools

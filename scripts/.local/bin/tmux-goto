@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Fuzzy-find a file or directory under the current directory and either open
+# it in nvim (file) or cd the invoking pane into it (directory).
+set -euo pipefail
+
+pane_id="$1"
+
+selection=$(
+	fd --type f --type d --hidden --exclude .git \
+		| fzf --prompt="goto> " --preview 'test -d {} && ls -la {} || bat --color=always {}'
+) || exit 0
+
+if [ -d "$selection" ]; then
+	tmux send-keys -t "$pane_id" -- "cd $(printf '%q' "$selection")" Enter
+else
+	"$HOME/.local/bin/nvim-at-line" "$selection"
+fi

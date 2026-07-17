@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Open a file in nvim, jumping to a line if given as path:line or path:line:col.
+# Splitting on the first colon misreads a literal colon-in-filename as a line
+# number, but that's rare enough on Linux to accept.
+set -euo pipefail
+
+target="$1"
+path="${target%%:*}"
+remainder="${target#"$path"}"
+line="${remainder#:}"
+line="${line%%:*}"
+
+if [[ "$line" =~ ^[0-9]+$ ]]; then
+	exec nvim "+$line" -- "$path"
+else
+	exec nvim -- "$target"
+fi
