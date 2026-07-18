@@ -4,6 +4,27 @@
 # number, but that's rare enough on Linux to accept.
 set -euo pipefail
 
+# Hint-pickers (tmux-thumbs) match trailing punctuation as part of a path
+# when it isn't separated from surrounding prose by whitespace (its path
+# regex treats "." as a valid path character, needed for dotfiles), so a
+# path immediately followed by a sentence-ending "." can arrive here with
+# that "." attached. Fall back to stripping one trailing punctuation
+# character when the literal path doesn't exist but the stripped one does
+# -- never triggers if the literal path already exists, so opening a
+# not-yet-created file on purpose still works.
+trailing_punct_re='^(.+)[].,;:)!?]$'
+
+resolve_path() {
+	local candidate="$1"
+	if [[ -e "$candidate" ]]; then
+		printf '%s' "$candidate"
+	elif [[ "$candidate" =~ $trailing_punct_re ]] && [[ -e "${BASH_REMATCH[1]}" ]]; then
+		printf '%s' "${BASH_REMATCH[1]}"
+	else
+		printf '%s' "$candidate"
+	fi
+}
+
 target="$1"
 path="${target%%:*}"
 remainder="${target#"$path"}"
@@ -11,7 +32,7 @@ line="${remainder#:}"
 line="${line%%:*}"
 
 if [[ "$line" =~ ^[0-9]+$ ]]; then
-	exec nvim "+$line" -- "$path"
+	exec nvim "+$line" -- "$(resolve_path "$path")"
 else
-	exec nvim -- "$target"
+	exec nvim -- "$(resolve_path "$target")"
 fi
