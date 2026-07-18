@@ -7,6 +7,12 @@ if ! pgrep -u "$USER" ssh-agent > /dev/null; then
   eval "$(ssh-agent -s)" >/dev/null
 fi
 
+# load keys into the agent once per boot (silent: askpass pulls the
+# passphrase from the already-unlocked KWallet); without this the agent
+# stays empty until something interactive happens to trigger AddKeysToAgent,
+# which non-interactive/headless SSH usage (e.g. an agentic push) can't do
+ssh-add -l >/dev/null 2>&1 || ssh-add ~/.ssh/id_ed25519 ~/.ssh/id_ed25519_implto </dev/null 2>/dev/null
+
 # NVM (Linux path)
 [[ -f /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
 
